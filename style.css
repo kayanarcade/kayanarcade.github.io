@@ -111,7 +111,7 @@ code {
   align-items: center;
 }
 
-.game img {
+.game > img {
   width: 112px;
   height: 112px;
   flex: none;
@@ -131,6 +131,24 @@ code {
   font-size: 0.85rem;
   font-weight: 700;
 }
+
+/* Google's badge PNG has clear space built in; pull it back so the
+   visible badge lines up with the text above it. */
+.store-badge {
+  display: inline-block;
+  margin: -4px 0 -10px -12px;
+  border-radius: 10px;
+}
+
+.store-badge img {
+  display: block;
+  width: 194px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.store-badge:focus-visible { outline: 3px solid var(--accent); outline-offset: -8px; }
 
 .summary {
   background: var(--well);
@@ -154,5 +172,5 @@ footer a { color: #fff; }
   h1 { font-size: 1.65rem; }
   .card { padding: 22px 18px; border-radius: 20px; }
   .game { flex-direction: column; align-items: flex-start; }
-  .game img { width: 96px; height: 96px; border-radius: 22px; }
+  .game > img { width: 96px; height: 96px; border-radius: 22px; }
 }
